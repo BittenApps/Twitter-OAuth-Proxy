@@ -1,0 +1,12 @@
+<?php
+
+define('CONSUMER_KEY', '');
+define('CONSUMER_SECRET', '');
+define('OAUTH_CALLBACK', '');
+
+define('DB_HOST', '');
+define('DB_USER', '');
+define('DB_PASS', '');
+define('DB_NAME', '');
+
+?>
