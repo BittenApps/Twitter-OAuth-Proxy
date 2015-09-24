@@ -1,8 +1,8 @@
 <?php
 
-define('CONSUMER_KEY', '');
-define('CONSUMER_SECRET', '');
-define('OAUTH_CALLBACK', '');
+define('CONSUMER_KEY', '');     //  OAuth consumer key
+define('CONSUMER_SECRET', '');  //  OAuth consumer secret
+define('OAUTH_CALLBACK', '');   //  Path to the finish.php page
 
 define('DB_HOST', '');
 define('DB_USER', '');
