@@ -15,9 +15,7 @@ Usage
 
 1. Application contacts start.php, and saves the id and key.
 
-2. User contacts userauth.php?id=[id], where [id] is the [id] supplied to the application on start.php
-
-2.1 As soon as user logs in, finish.php will be pinged and the OAuth details stored on the database.
+2. User contacts userauth.php?id=[id], where [id] is the [id] supplied to the application on start.php. (As soon as user logs in, finish.php will be pinged and the OAuth details stored on the database.)
 
 3. Application pings retrieve.php?id=[id]&key=[key], where [id] and [key] are the [id] and [key] received on the start.php call until a oauth key/secret can be acquired.
 
