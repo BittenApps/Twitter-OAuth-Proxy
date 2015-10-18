@@ -1,23 +1,27 @@
 Twitter OAuth PHP Proxy
 ===
 
-(This is still a draft)
+PHP OAuth Proxy for systems without keyboard input.
 
 Installation
 ---
 
 1. Edit inc/config.inc.php.dist, and rename it to inc/config.inc.php.
 
-2. (Optional) Personalize finish.php.
+2. (Optional, but Recommended!) Personalize finish.php.
 
 Usage
 ---
 
-1. Application contacts start.php, and saves the id and key.
+1. A keyboardless application contacts start.php, and saves the id and key (passed on as a JSON dictionary).
 
-2. User contacts userauth.php?id=[id], where [id] is the [id] supplied to the application on start.php. (As soon as user logs in, finish.php will be pinged and the OAuth details stored on the database.)
+2. The keyboardless application requests the user to contact userauth.php?id=[id], where [id] is the [id] supplied to the application on start.php. 
 
-3. Application pings retrieve.php?id=[id]&key=[key], where [id] and [key] are the [id] and [key] received on the start.php call until a oauth key/secret can be acquired.
+3. As soon as user accesses the link and logs on to Twitter, finish.php will be called as part of the authentication process and the OAuth details stored on the database.
+
+3. The keyboardless application should be pinging retrieve.php?id=[id]&key=[key] every second or so, depending on whatever is acceptable UX for you, where [id] and [key] are the [id] and [key] received on the start.php. This should be done until the server replies with a OAuth key/secret.
+
+4. The keyboardless application may now use these details to log on to Twitter!
 
 SQL Table
 ---
